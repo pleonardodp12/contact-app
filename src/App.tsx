@@ -1,7 +1,8 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import Contacts from './containers/Contacts';
-function App() {
+
+const App = () => {
   return (
     <>
       <Contacts />
@@ -13,6 +14,7 @@ function App() {
 const Styles = createGlobalStyle`
   html {
     font-size:16px;
+    font-family: sans-serif;
   }
 
   html,body, #root {
@@ -20,9 +22,7 @@ const Styles = createGlobalStyle`
   }
   body {
     margin:0;
-  }
-
-`
+  }`
 
 export default App;
 

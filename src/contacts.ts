@@ -1,13 +1,13 @@
 const CONTACTS = [
     {
-        id:"1",
-        name:"Paulo",
+        id: "1",
+        name: "Paulo",
         email: "paulo@paulo.com",
         phoneNumber: "12345678944"
     },
     {
-        id:"2",
-        name:"Leonardo",
+        id: "2",
+        name: "Leonardo",
         email: "leonardo@paulo.com",
         phoneNumber: "12345678945"
     },
@@ -18,10 +18,16 @@ const CONTACTS = [
         phoneNumber: "12345678946"
     },
     {
-        id:"4",
-        name:"Pereira",
+        id: "4",
+        name: "Pereira",
         email: "pereira@paulo.com",
-        phoneNumber: "12345678944"
+        phoneNumber: "12345678949"
+    },
+    {
+        id:"5",
+        name: "Robertinho",
+        email: "palinho@pipipi.com",
+        phoneNumber: "382292"
     }
 ];
 

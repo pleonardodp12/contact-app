@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import ContactItem from './/Contacts';
+import ContactItem from '../components/Contactitem';
 import CONTACTS from '../contacts'
 
 const Wrapper = styled.main`
@@ -13,21 +13,34 @@ const Wrapper = styled.main`
 
 const Card = styled.div`
     width:768px;
-    height:100px;
+    padding: 16px;
     background-color: #eee;
     box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    overflow-y: auto;
 `;
-const Contacts = () => {
 
+const Contacts = () => {
+    const [contacts, setContacts] = useState(CONTACTS);
+
+    const handleRemoveContact = (removeContactId: string) => {
+        setContacts(contacts =>
+            contacts.filter(contact => contact.id !== removeContactId)
+        );
+    };
 
     return (
         <Wrapper>
-            <Card />
+            <Card>
             <ul>
-                {CONTACTS.map(contact => (
-                <ContactItem key={contact.id} contact={contact} />
+                {contacts.map(contact => (
+                <ContactItem
+                    key={contact.id}
+                    contact={contact}
+                    onRemoveContact={handleRemoveContact}
+                />
                 ))}
             </ul>
+            </Card>
         </Wrapper>
     );
 };

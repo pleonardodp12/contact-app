@@ -1,11 +1,11 @@
-/*
-* tipo que representa o contato.
+/**
+* Tipo que representa o contato.
 */
 type Contact = {
-    id:string;
-    name:string;
-    email:string;
-    phoneNumber:string;
+    id: string;
+    name: string;
+    email: string;
+    phoneNumber: string;
 };
 
 export default Contact;
