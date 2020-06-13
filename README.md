@@ -1,5 +1,6 @@
 <h1>Contacts</h1>
 
+![contacts-app](https://user-images.githubusercontent.com/54605079/84572840-29a8e400-ad73-11ea-982f-bff0b5377460.gif)
 
 
 Este projeto foi iniciado com o [Create React App](https://github.com/facebook/create-react-app).
