@@ -10,12 +10,19 @@ type Props = {
 const Card = styled.li`
     padding: 16px;
     border-radius: 20px;
-    background-color: #40E0D0;
+    background-color: #ffa500;
 
     & + & {
         margin-top:16px;
     }
+`;
 
+const Button = styled.button`
+    background-color: white;
+    border: none;
+    font-size: 1em;
+    border-radius: 8px;
+    padding: 15px
 `;
 
 const ContactItem = ({ contact, onRemoveContact }: Props) => (
@@ -24,7 +31,7 @@ const ContactItem = ({ contact, onRemoveContact }: Props) => (
         <p>E-mail: {contact.email}</p>
         <p>Telefone: {contact.phoneNumber}</p>
 
-        <button onClick={() => onRemoveContact(contact.id)}>Excluir contato</button>
+        <Button onClick={() => onRemoveContact(contact.id)}>Excluir contato</Button>
     </Card>
 );
 

@@ -17,7 +17,7 @@ const Wrapper = styled.main`
 const Card = styled.div`
     width:768px;
     padding: 16px;
-    background-color: #008080;
+    background-color: #1a1a1a;
     box-shadow: 0 0 10px rgba(0,0,0,0.25);
     overflow-y: auto;
 `;
@@ -26,6 +26,23 @@ const ContactsList = styled.ul`
     list-style: none;
     margin: 0;
     padding: 0;
+`;
+
+const Button = styled.button`
+    background-color: white;
+    border: none;
+    font-size: 1em;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+`;
+
+const Title = styled.h1`
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: white;
+
 `;
 
 const Contacts = () => {
@@ -47,11 +64,12 @@ const Contacts = () => {
     return (
         <Wrapper>
             <Card>
+            <Title>Contacts</Title>
             <header>
                 {isAddingContact && (<AddContactForm onAddContact={handleAddContact}/>)}
-                <button onClick={()=>setAddingContact(true)}>
+                <Button onClick={()=>setAddingContact(true)}>
                     Adicionar contato
-                </button>
+                </Button>
             </header>
             <ContactsList>
                 {contacts.map(contact => (
